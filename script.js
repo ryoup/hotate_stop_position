@@ -115,8 +115,8 @@ function extractPRegions(img, points) {
     outputDiv.innerHTML = "<h3>候補</h3>";
 
     points.forEach(({ x, y }) => {
-        const cropWidth = 220;
-        const cropHeight = 220;
+        const cropWidth = 200;
+        const cropHeight = 200;
         const offsetY = 15;
 
         // **キャンバスにPの位置を描画**
