@@ -1,14 +1,14 @@
-let userThreshold = 0.45; // デフォルトのしきい値
+let userThreshold = 0.5; // デフォルトのしきい値
 
 // ボタンを押すと閾値を切り替える
 function toggleThreshold() {
     const button = document.getElementById("thresholdButton");
-    if (userThreshold === 0.45) {
+    if (userThreshold === 0.5) {
         userThreshold = 0.35;
         button.innerText = "通常に戻す";
         document.getElementById("thresholdDisplay").innerText = "甘め";
     } else {
-        userThreshold = 0.45;
+        userThreshold = 0.5;
         button.innerText = "甘めにする";
         document.getElementById("thresholdDisplay").innerText = "通常";
     }
@@ -115,8 +115,8 @@ function extractPRegions(img, points) {
     outputDiv.innerHTML = "<h3>候補</h3>";
 
     points.forEach(({ x, y }) => {
-        const cropWidth = 230;
-        const cropHeight = 230;
+        const cropWidth = 220;
+        const cropHeight = 220;
         const offsetY = 15;
 
         // **キャンバスにPの位置を描画**
@@ -127,8 +127,8 @@ function extractPRegions(img, points) {
         ctx.drawImage(img, x - cropWidth / 2, y - offsetY, cropWidth, cropHeight, 0, 0, cropWidth, cropHeight);
 
         // **Pの正確な座標を切り取った画像内の相対座標に変換**
-        const relativeX = x - (x - cropWidth / 2) +22;
-        const relativeY = y - (y - offsetY) +32;
+        const relativeX = x - (x - cropWidth / 2) +20;
+        const relativeY = y - (y - offsetY) +29;
 
         // **Pの位置を○で囲む**
         drawCircle(ctx, relativeX, relativeY);
@@ -149,7 +149,7 @@ function drawCircle(ctx, x, y) {
     ctx.strokeStyle = "black"; // 円の色
     ctx.lineWidth = 10; // 線の太さ
     ctx.beginPath();
-    ctx.arc(x, y, 32, 0, 2 * Math.PI); // 半径10pxの円
+    ctx.arc(x, y, 30, 0, 2 * Math.PI); // 半径10pxの円
     ctx.stroke();
 }
 
