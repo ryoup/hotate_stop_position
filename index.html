@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stop position judging tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://docs.opencv.org/4.5.5/opencv.js"></script> <!-- OpenCV.js を読み込み -->
+</head>
+<body>
+    <h1>停止位置チェッカー</h1>
+    <h3>※ iPhone15限定</h3>
+
+    <form id="uploadForm">
+        <input type="file" id="fileInput" accept="image/*">
+        <button type="submit" id="startButton">解析開始</button>
+    </form>
+
+    <!-- しきい値選択ボタン -->
+    <div id="thresholdSelection">
+        <p>現在の設定 ： <span id="thresholdDisplay">通常</span>
+            <button id="thresholdButton" onclick="toggleThreshold()">甘めにする</button>
+        </p>
+    </div>
+
+    <div id="output"></div>
+    <div id="selectedCoords"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
