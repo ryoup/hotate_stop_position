@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+/* ファイル選択ボタンを大きくする */
+input[type="file"] {
+    font-size: 18px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px 0;
+}
+
+#uploadForm {
+    margin: 20px 0;
+}
+
+#fileInput {
+    padding: 10px;
+}
+
+/* 解析開始ボタンを大きくする */
+#startButton {
+    font-size: 18px;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#startButton:hover {
+    background-color: #0056b3;
+}
+
+/* 閾値表示とボタンを横並びに */
+#thresholdSelection {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#thresholdSelection p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* 閾値設定ボタンを小さくし、右側に配置 */
+#thresholdButton {
+    font-size: 12px;
+    padding: 4px 8px;
+    background-color: #ccc;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px; /* しきい値の右に配置 */
+}
+
+#thresholdButton:hover {
+    background-color: #aaa;
+}
+
+/* 出力エリアを調整 */
+#output {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* 検出画像のスタイル */
+.result-img {
+    display: block;
+    margin-top: 5px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.result-img:hover {
+    transform: scale(1.1);
+}
